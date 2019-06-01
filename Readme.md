@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг» [![Build status][travis-image]][travis-url]
 
 * Студент: [Eugene Kuprikov](https://up.htmlacademy.ru/javascript/17/user/621103).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Тимоновский](https://up.htmlacademy.ru/javascript/17/user/768125).
 
 ---
 
