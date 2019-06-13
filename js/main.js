@@ -45,3 +45,5 @@ var createAnnounces = function () {
 };
 
 var arrAnnounces = createAnnounces();
+
+document.querySelector('.map').classList.remove('map--faded');
