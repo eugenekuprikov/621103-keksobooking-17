@@ -23,3 +23,23 @@ var getArrayRandomElement = function (max, min) {
   var randomElement = Math.floor(Math.random() * (max - min) + min);
   return randomElement;
 };
+
+var createAnnounces = function () {
+  var announces = [];
+  for (var i = 0; i < 8; i++) {
+    var announce = {
+      author: {
+        avatar: 'img/avatars/user' + '0' + ranNums[i] + '.png'
+      },
+      offer: {
+        type:  PLACES[getArrayRandomElement(0, 4)]
+      },
+      location: {
+        x: getArrayRandomElement(0, 1199),
+        y: getArrayRandomElement(130, 630)
+      }
+    };
+    announces[i] = announce;
+  }
+  return announces;
+};
