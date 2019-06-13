@@ -18,3 +18,8 @@ var shuffle = function (arr) {
 };
 
 var ranNums = shuffle(NUMBERS);
+
+var getArrayRandomElement = function (max, min) {
+  var randomElement = Math.floor(Math.random() * (max - min) + min);
+  return randomElement;
+};
