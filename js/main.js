@@ -32,7 +32,7 @@ var createAnnounces = function () {
         avatar: 'img/avatars/user' + '0' + ranNums[i] + '.png'
       },
       offer: {
-        type:  PLACES[getArrayRandomElement(0, 4)]
+        type: PLACES[getArrayRandomElement(0, 4)]
       },
       location: {
         x: getArrayRandomElement(0, 1199),
