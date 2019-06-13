@@ -61,3 +61,10 @@ var renderPin = function (pin) {
 
   return pinElement;
 };
+
+var fragment = document.createDocumentFragment();
+
+for (var i = 0; i < arrAnnounces.length; i++) {
+  fragment.appendChild(renderPin(arrAnnounces[i]));
+}
+similarListElement.appendChild(fragment);
