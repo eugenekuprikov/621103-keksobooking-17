@@ -48,3 +48,5 @@ var arrAnnounces = createAnnounces();
 
 document.querySelector('.map').classList.remove('map--faded');
 var similarListElement = document.querySelector('.map__pins');
+var similarPinTemplate = document.querySelector('#pin')
+  .content.querySelector('.map__pin');
