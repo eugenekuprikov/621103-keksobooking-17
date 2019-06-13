@@ -43,3 +43,5 @@ var createAnnounces = function () {
   }
   return announces;
 };
+
+var arrAnnounces = createAnnounces();
