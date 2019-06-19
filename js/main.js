@@ -90,3 +90,5 @@ var onMapPinMainClick = function () {
 };
 
 mapPinMain.addEventListener('click', onMapPinMainClick);
+
+var address = document.querySelector('#address');
