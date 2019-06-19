@@ -100,3 +100,8 @@ var setValues = function () {
 };
 
 setValues();
+
+mapPinMain.addEventListener('mouseup', function () {
+  onMapPinMainClick();
+  setValues();
+});
