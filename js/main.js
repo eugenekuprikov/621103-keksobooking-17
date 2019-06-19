@@ -75,3 +75,8 @@ var mapFilters = document.querySelector('.map__filters');
 var mapPinMain = document.querySelector('.map__pin--main');
 var map = document.querySelector('.map');
 var adForm = document.querySelector('.ad-form');
+
+map.classList.add('map--faded');
+adFormHeader.classList.add('ad-form-header--disabled');
+adFormElement.classList.add('ad-form__element--disabled');
+mapFilters.classList.add('map__filters--disabled');
