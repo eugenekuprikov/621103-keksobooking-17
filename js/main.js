@@ -80,3 +80,11 @@ map.classList.add('map--faded');
 adFormHeader.classList.add('ad-form-header--disabled');
 adFormElement.classList.add('ad-form__element--disabled');
 mapFilters.classList.add('map__filters--disabled');
+
+var onMapPinMainClick = function () {
+  map.classList.remove('map--faded');
+  adForm.classList.remove('ad-form--disabled');
+  adFormHeader.classList.remove('ad-form-header--disabled');
+  adFormElement.classList.remove('ad-form__element--disabled');
+  mapFilters.classList.remove('map__filters--disabled');
+};
