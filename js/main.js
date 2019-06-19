@@ -92,3 +92,11 @@ var onMapPinMainClick = function () {
 mapPinMain.addEventListener('click', onMapPinMainClick);
 
 var address = document.querySelector('#address');
+
+var setValues = function () {
+  var x = mapPinMain.getBoundingClientRect().left - 32.5;
+  var y = mapPinMain.getBoundingClientRect().top - 87;
+  address.value = [x,y];
+};
+
+setValues();
