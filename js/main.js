@@ -88,3 +88,5 @@ var onMapPinMainClick = function () {
   adFormElement.classList.remove('ad-form__element--disabled');
   mapFilters.classList.remove('map__filters--disabled');
 };
+
+mapPinMain.addEventListener('click', onMapPinMainClick);
