@@ -68,3 +68,10 @@ for (var i = 0; i < arrAnnounces.length; i++) {
   fragment.appendChild(renderPin(arrAnnounces[i]));
 }
 similarListElement.appendChild(fragment);
+
+var adFormHeader = document.querySelector('.ad-form-header');
+var adFormElement = document.querySelector('.ad-form__element');
+var mapFilters = document.querySelector('.map__filters');
+var mapPinMain = document.querySelector('.map__pin--main');
+var map = document.querySelector('.map');
+var adForm = document.querySelector('.ad-form');
