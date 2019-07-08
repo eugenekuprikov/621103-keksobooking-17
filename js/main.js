@@ -113,3 +113,30 @@ mapPinMain.addEventListener('mouseup', function () {
   onMapPinMainClick();
   setValues();
 });
+
+var selectType = document.querySelector('#type');
+var price = document.querySelector('#price');
+price.setAttribute('min', '0');
+
+var changePrice = function () {
+  var typeOpt = selectType.options[selectType.selectedIndex].value;
+    if (typeOpt === 'bungalo') {
+      price.min = 0;
+      price.placeholder = '0';
+    }
+    if (typeOpt === 'flat') {
+      price.min = 1000;
+      price.placeholder = '1000';
+    }
+    if (typeOpt === 'house') {
+      price.min = 5000;
+      price.placeholder = '5000';
+    }
+    if (typeOpt === 'palace') {
+      price.min = 10000;
+      price.placeholder = '10000';
+    }
+  return price.placeholder;
+};
+
+selectType.addEventListener('change', changePrice);
