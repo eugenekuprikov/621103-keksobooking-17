@@ -167,3 +167,32 @@ var synchronizeDateOut = function () {
 };
 
 timeOut.addEventListener('change', synchronizeDateOut);
+
+var titleInput = document.querySelector('#title');
+titleInput.addEventListener('invalid', function (evt) {
+  if (titleInput.validity.tooShort) {
+    titleInput.setCustomValidity('Имя должно состоять минимум из тридцати символов');
+  } else if (titleInput.validity.tooLong) {
+    titleInput.setCustomValidity('Имя не должно превышать 100 символов');
+  } else if (titleInput.validity.valueMissing) {
+    titleInput.setCustomValidity('Обязательное поле');
+  } else {
+    titleInput.setCustomValidity('');
+  }
+});
+
+price.addEventListener('invalid', function (evt) {
+  if (price.validity.rangeOverflow) {
+    price.setCustomValidity('Значение превосходит максимальную цену');
+  } else if (price.validity.valueMissing) {
+    price.setCustomValidity('Обязательное поле');
+  } else {
+    price.setCustomValidity('');
+  }
+});
+
+selectType.addEventListener('invalid', function (evt) {
+  if (selectType.options[selectType.selectedIndex].value === '') {
+    selectType.setCustomValidity('Выберите тип жилья');
+  }
+});
