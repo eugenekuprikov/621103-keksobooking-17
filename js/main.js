@@ -86,3 +86,15 @@ var nonActivateMap = function () {
 };
 
 nonActivateMap();
+
+var onMapPinMainClick = function () {
+  map.classList.remove('map--faded');
+  adForm.classList.remove('ad-form--disabled');
+  adFormHeader.classList.remove('ad-form-header--disabled');
+  adFormElement.classList.remove('ad-form__element--disabled');
+  mapFilters.classList.remove('map__filters--disabled');
+
+  createListElement();
+};
+
+mapPinMain.addEventListener('click', onMapPinMainClick);
