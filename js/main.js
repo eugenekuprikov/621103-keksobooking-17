@@ -140,3 +140,30 @@ var changePrice = function () {
 };
 
 selectType.addEventListener('change', changePrice);
+
+var timeIn = document.querySelector('#timein');
+var timeOut = document. querySelector('#timeout');
+
+var synchronizeDateIn = function () {
+  var val = timeIn.value;
+  var options = timeOut.options;
+  for (var i = 0; i < options.length; i++) {
+    if (options[i].value === val) {
+      options[i].selected = true;
+    }
+  }
+};
+
+timeIn.addEventListener('change', synchronizeDateIn);
+
+var synchronizeDateOut = function () {
+  var val = timeOut.value;
+  var options = timeIn.options;
+  for (var i = 0; i < options.length; i++) {
+    if (options[i].value === val) {
+      options[i].selected = true;
+    }
+  }
+};
+
+timeOut.addEventListener('change', synchronizeDateOut);
