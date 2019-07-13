@@ -100,8 +100,8 @@ var onMapPinMainClick = function () {
 var address = document.querySelector('#address');
 
 var setValues = function () {
-  var x = mapPinMain.getBoundingClientRect().left - 32.5;
-  var y = mapPinMain.getBoundingClientRect().top - 87;
+  var x = mapPinMain.getBoundingClientRect().left - 32.5 + window.scrollX;
+  var y = mapPinMain.getBoundingClientRect().top - 87 + window.scrollY;
   address.value = [x, y];
 };
 
