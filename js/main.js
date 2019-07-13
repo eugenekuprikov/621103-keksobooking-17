@@ -158,7 +158,6 @@ mapPinMain.addEventListener('mousedown', function (evt) {
 });
 
 mapPinMain.addEventListener('mouseup', function () {
-  onMapPinMainClick();
   setValues();
 });
 
