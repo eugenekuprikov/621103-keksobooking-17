@@ -107,6 +107,14 @@ var setValues = function () {
 
 setValues();
 
+mapPinMain.addEventListener('mousedown', function (evt) {
+  evt.preventDefault();
+
+  var startCoords = {
+    x: evt.clientX,
+    y: evt.clientY
+  };
+
 mapPinMain.addEventListener('mouseup', function () {
   onMapPinMainClick();
   setValues();
