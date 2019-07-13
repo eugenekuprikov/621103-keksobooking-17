@@ -97,8 +97,6 @@ var onMapPinMainClick = function () {
   createListElement();
 };
 
-mapPinMain.addEventListener('click', onMapPinMainClick);
-
 var address = document.querySelector('#address');
 
 var setValues = function () {
