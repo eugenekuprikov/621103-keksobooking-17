@@ -115,6 +115,20 @@ mapPinMain.addEventListener('mousedown', function (evt) {
     y: evt.clientY
   };
 
+  var onMouseMove = function (moveEvt) {
+    moveEvt.preventDefault();
+    onMapPinMainClick();
+
+    var shift = {
+      x: startCoords.x - moveEvt.clientX,
+      y: startCoords.y - moveEvt.clientY
+    };
+
+    startCoords = {
+      x: moveEvt.clientX,
+      y: moveEvt.clientY
+    };
+
 mapPinMain.addEventListener('mouseup', function () {
   onMapPinMainClick();
   setValues();
