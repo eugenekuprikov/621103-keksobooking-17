@@ -144,6 +144,15 @@ mapPinMain.addEventListener('mousedown', function (evt) {
     setValues();
   };
 
+  var onMouseUp = function (upEvt) {
+    upEvt.preventDefault();
+
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mouseup', onMouseUp);
+
+    setValues();
+  };
+
 mapPinMain.addEventListener('mouseup', function () {
   onMapPinMainClick();
   setValues();
