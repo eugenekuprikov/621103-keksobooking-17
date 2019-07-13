@@ -2,6 +2,10 @@
 
 var NUMBERS = [1, 2, 3, 4, 5, 6, 7, 8];
 var PLACES = ['palace', 'flat', 'house', 'bungalo'];
+var YMIN = 130;
+var YMAX = 630;
+var XMIN = 0;
+var XMAX = 1199;
 
 var shuffle = function (arr) {
   var i = arr.length;
@@ -128,6 +132,17 @@ mapPinMain.addEventListener('mousedown', function (evt) {
       x: moveEvt.clientX,
       y: moveEvt.clientY
     };
+
+    var y1 = mapPinMain.offsetTop - shift.y;
+    var x1 = mapPinMain.offsetLeft - shift.x;
+
+    if (y1 > YMIN && y1 < YMAX && x1 > XMIN && x1 < XMAX - 62) {
+      mapPinMain.style.top = y1 + 'px';
+      mapPinMain.style.left = x1 + 'px';
+    }
+
+    setValues();
+  };
 
 mapPinMain.addEventListener('mouseup', function () {
   onMapPinMainClick();
