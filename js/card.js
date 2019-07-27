@@ -10,11 +10,11 @@
           avatar: 'img/avatars/user' + '0' + ranNums[i] + '.png'
         },
         offer: {
-          type: window.data.PLACES[window.shuffle.getArrayRandomElement(0, 4)]
+          type: window.data.PLACES[window.getArrayRandomElement(0, 4)]
         },
         location: {
-          x: window.shuffle.getArrayRandomElement(window.data.XMIN, window.data.XMAX),
-          y: window.shuffle.getArrayRandomElement(window.data.YMIN, window.data.YMAX)
+          x: window.getArrayRandomElement(window.data.XMIN, window.data.XMAX),
+          y: window.getArrayRandomElement(window.data.YMIN, window.data.YMAX)
         }
       };
       announces[i] = announce;
