@@ -2,7 +2,7 @@
 
 (function () {
   var mapFilters = document.querySelector('.map__filters');
-  var mapPinMain = document.querySelector('.map__pin--main'); //Добавляем название класса без БЭМ элементу главного пина.
+  var mapPinMain = document.querySelector('.map__pin--main');
   var map = document.querySelector('.map');
   var adFormHeader = document.querySelector('.ad-form-header');
   var adFormElement = document.querySelector('.ad-form__element');
