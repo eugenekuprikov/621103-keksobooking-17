@@ -7,22 +7,22 @@
 
   var changePrice = function () {
     var typeOpt = selectType.options[selectType.selectedIndex].value;
-      if (typeOpt === 'bungalo') {
-        price.min = 0;
-        price.placeholder = '0';
-      }
-      if (typeOpt === 'flat') {
-        price.min = 1000;
-        price.placeholder = '1000';
-      }
-      if (typeOpt === 'house') {
-        price.min = 5000;
-        price.placeholder = '5000';
-      }
-      if (typeOpt === 'palace') {
-        price.min = 10000;
-        price.placeholder = '10000';
-      }
+    if (typeOpt === 'bungalo') {
+      price.min = 0;
+      price.placeholder = '0';
+    }
+    if (typeOpt === 'flat') {
+      price.min = 1000;
+      price.placeholder = '1000';
+    }
+    if (typeOpt === 'house') {
+      price.min = 5000;
+      price.placeholder = '5000';
+    }
+    if (typeOpt === 'palace') {
+      price.min = 10000;
+      price.placeholder = '10000';
+    }
     return price.placeholder;
   };
 
@@ -56,7 +56,7 @@
   timeOut.addEventListener('change', synchronizeDateOut);
 
   var titleInput = document.querySelector('#title');
-  titleInput.addEventListener('invalid', function (evt) {
+  titleInput.addEventListener('invalid', function () {
     if (titleInput.validity.tooShort) {
       titleInput.setCustomValidity('Имя должно состоять минимум из тридцати символов');
     } else if (titleInput.validity.tooLong) {
@@ -68,7 +68,7 @@
     }
   });
 
-  price.addEventListener('invalid', function (evt) {
+  price.addEventListener('invalid', function () {
     if (price.validity.rangeOverflow) {
       price.setCustomValidity('Значение превосходит максимальную цену');
     } else if (price.validity.valueMissing) {
@@ -78,7 +78,7 @@
     }
   });
 
-  selectType.addEventListener('invalid', function (evt) {
+  selectType.addEventListener('invalid', function () {
     if (selectType.options[selectType.selectedIndex].value === '') {
       selectType.setCustomValidity('Выберите тип жилья');
     }
