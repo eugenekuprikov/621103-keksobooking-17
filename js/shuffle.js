@@ -15,8 +15,6 @@
     return arr;
   };
 
-  // var ranNums = shuffle(NUMBERS);
-
   window.getArrayRandomElement = function (max, min) {
     var randomElement = Math.floor(Math.random() * (max - min) + min);
     return randomElement;
